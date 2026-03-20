@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: var(--font-oswald), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  --color-brand-50: #fff4ed;
+  --color-brand-100: #ffe5d4;
+  --color-brand-200: #ffc8aa;
+  --color-brand-300: #ffa275;
+  --color-brand-400: #ff723a;
+  --color-brand-500: #ff4e00;
+  --color-brand-600: #f03900;
+  --color-brand-700: #c72702;
+  --color-brand-800: #9e200a;
+  --color-brand-900: #7f1e0c;
+  --color-brand-950: #450c04;
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-950 text-neutral-300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold uppercase tracking-tight text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .clip-path-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  
+  .clip-path-slant-reverse {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  }
+}
